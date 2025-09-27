@@ -1,0 +1,84 @@
+{% extends "a.html" %}
+{% load static %}
+{% block title %}Analysis - MEDI.AI{% endblock %}
+
+{% block content %}
+<!-- Analysis Page -->
+<div class="go">
+  <div class="container">
+    <div class="header">
+      <h1>MEDI.AI</h1>
+      <p>Provide Your Tissue Characteristics or Book An Appointment</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showForm('analysisForm')">Medical Data Collection</button>
+      <button class="tab-btn" onclick="showForm('appointmentForm')">Book Appointment</button>
+    </div>
+
+    <!-- Medical Data Collection Form -->
+    <form action="/pred/" method="post" id="analysisForm" class="form-content">
+    {% csrf_token %}
+      <div class="form-group">
+        <label for="mean_radius">Mean Radius<span class="required">*</span></label>
+        <input type="number" id="mean_radius" name="mean_radius" step="0.01" placeholder="Enter radius mean value (e.g., 12.34)" required>
+        <div class="info-text">Average distance from center to perimeter</div>
+      </div>
+
+      <div class="form-group">
+        <label for="mean_texture">Mean Texture<span class="required">*</span></label>
+        <input type="number" id="mean_texture" name="mean_texture" step="0.01" placeholder="Enter texture mean value (e.g., 25.68)" required>
+        <div class="info-text">Average of local variations in intensity</div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Data</button>
+    </form>
+
+    <!-- Appointment Booking Form -->
+    <form id="appointmentForm" class="form-content" style="display:none;">
+      <div class="form-group">
+        <label for="name">Full Name<span class="required">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email<span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone<span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Select Date<span class="required">*</span></label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="time">Select Time<span class="required">*</span></label>
+        <input type="time" id="time" name="time" required>
+      </div>
+
+      <div class="form-group">
+        <label for="doctor">Select Doctor<span class="required">*</span></label>
+        <select id="doctor" name="doctor" required>
+          <option value="">Choose a Doctor</option>
+          <option value="dr_smith">Dr. Alic (Oncologist)</option>
+          <option value="dr_jones">Dr. Josef (Pathologist)</option>
+          <option value="dr_khan">Dr. Jon (Surgeon)</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Book Appointment</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      ✅ Submission successful! Thank you.
+    </div>
+  </div>
+</div>
+
+{% endblock %}

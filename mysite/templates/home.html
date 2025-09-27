@@ -1,0 +1,102 @@
+{% extends "a.html" %}
+{% load static %}
+<!--{% block title %}Home - MEDI.AI{% endblock %}-->
+
+{% block content %}
+     <!-- Home Section -->
+    <section class="hero">
+    <!-- Left Text Content -->
+    <div class="hero-text">
+      <h1 style="color: orangered;">Welcome to MEDI.AI</h1>
+      <h1>Using AI for Cancer Detection:<br> Challenges and Opportunities</h1>
+      <div class="meta">
+        Updated on AUG 14, 2025 
+      </div>
+      <div class="tags">
+        <span class="tag">Healthcare</span>
+        <span class="tag">AI/ML</span>
+      </div>
+      <div class="buttons">
+      <a href="/analysis/" class="btn btn-primary">Start Analysis</a>
+      <a href="/about-us/" class="btn btn-secondary">Learn More</a>
+    </div>
+    </div>
+    <!-- Right Image Content -->
+    <div class="hero-image">
+      <img src="{% static 'img/62fd1d5361c2222a9bc736c4_Blood cancer.jpg' %}" alt="AI Cancer Detection">
+    </div>
+  </section>
+  <!-- Features -->
+  <div class="fe">
+  <section class="features">
+    <h2>Cutting-Edge Detection Technology</h2>
+    <p>Our advanced AI algorithms analyze cellular structures with unprecedented accuracy</p>
+    <div class="feature-grid">
+      <div class="card">
+        <h3>High Accuracy</h3>
+        <p>AI achieves 99.2% accuracy in detecting abnormal cell formations.</p>
+      </div>
+      <div class="card">
+        <h3>Rapid Processing</h3>
+        <p>Get results in under 30 seconds per sample, enabling faster diagnosis.</p>
+      </div>
+      <div class="card">
+        <h3>FDA Validated</h3>
+        <p>Clinically validated and FDA-approved technology trusted by professionals.</p>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="circle" style="background-color: blue;">1</div>
+        <h3>Upload Sample</h3>
+        <p>Upload your microscopic cell sample images in any standard format.</p>
+      </div>
+      <div class="step">
+        <div class="circle" style="background-color: deepskyblue;">2</div>
+        <h3>AI Analysis</h3>
+        <p>Our advanced model analyzes morphology and identifies anomalies.</p>
+      </div>
+      <div class="step">
+        <div class="circle" style="background-color: green;">3</div>
+        <h3>Get Results</h3>
+        <p>Receive detailed analysis with confidence score in seconds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div>
+      <h3 style="color: green;">99.2%</h3>
+      <p>Detection Accuracy</p>
+    </div>
+    <div>
+      <h3 style="color: yellow;">30s</h3>
+      <p>Avg. Analysis Time</p>
+    </div>
+    <div>
+      <h3 style="color: palegreen;">50K+</h3>
+      <p>Samples Analyzed</p>
+    </div>
+    <div>
+      <h3 style="color: royalblue;">200+</h3>
+      <p>Medical Centers</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="ca">
+  <section class="cta">
+    <h2>Ready to Start Your Analysis?</h2>
+    <p>Join thousands of medical professionals using our platform for accurate cancer detection.</p>
+    <a href="/analysis/" class="btn_btn-primary">Start Analysis Now</a>
+  </section>
+  </div>
+
+  {% endblock %}
