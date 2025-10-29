@@ -1,9 +1,0 @@
-Django
-gunicorn
-joblib
-pandas
-numpy
-scikit-learn
-matplotlib
-
-
