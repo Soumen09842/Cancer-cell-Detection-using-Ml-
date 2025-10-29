@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6j1cq^&!hllz^grk^c2fa-=3-$dm6auj!0y&mv2l$*v=&1=9t-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cancer-cell-detection.onrender.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
